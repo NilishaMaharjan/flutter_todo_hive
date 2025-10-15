@@ -10,7 +10,7 @@ class ToDoDataBase{
   void createInitialData(){
     toDoList = [
       ['Drink water',false],
-      ['DO Exercise',false],
+      ['Do Exercise',false],
     ];
   }
 

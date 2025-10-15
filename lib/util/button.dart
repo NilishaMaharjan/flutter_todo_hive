@@ -12,17 +12,27 @@ class Button extends StatelessWidget{
     required this.color,
     });
 
-  @override
-  Widget build(BuildContext context){
-    return MaterialButton(
+    @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
       onPressed: onPressed,
-      color: Theme.of(context).primaryColor,
-      textColor: Colors.white, 
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8), 
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
-      child: Text(text),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
+          letterSpacing: 0.5,
+        ),
+      ),
     );
   }
 }

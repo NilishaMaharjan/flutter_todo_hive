@@ -27,34 +27,65 @@ class ToDoTile extends StatelessWidget{
             SlidableAction(
               onPressed: deleteFunction,
               icon: Icons.delete,
-              backgroundColor: Colors.red,
-              borderRadius: BorderRadius.circular(12),)
+              backgroundColor: Colors.redAccent,
+              borderRadius: BorderRadius.circular(16),)
           ],
         ),
         child: Container(
-          padding: EdgeInsets.all(18),
-          child: Row(
-          children: [
-            //checkbox
-            Checkbox(value: taskCompleted, onChanged: onChanged),
-              
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+          decoration: BoxDecoration(
+            color: Color(0xFFFFF0F2),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFFFF7A8A).withOpacity(0.2), // subtle pink shadow
+                blurRadius: 2,
+                spreadRadius: 2,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+         child: Row(
+            children: [
+              // Custom circle checkbox look
+              GestureDetector(
+                onTap: () => onChanged?.call(!taskCompleted),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  width: 26,
+                  height: 26,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: const Color(0xFFFF7B89),
+                      width: 2,
+                    ),
+                    color: taskCompleted
+                        ? const Color(0xFFFF7B89)
+                        : Colors.transparent,
+                  ),
+                  child: taskCompleted
+                      ? const Icon(Icons.check,
+                          size: 16, color: Colors.white)
+                      : null,
+                ),
+              ),
+
+              const SizedBox(width: 14),
         
               //task name
               Text(
                 taskName,
                 style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
                   decoration: taskCompleted
-                  ? TextDecoration.lineThrough
-                  :TextDecoration.none,
+                        ? TextDecoration.lineThrough
+                        :TextDecoration.none,
                   ),
                 ),
           ],
         ),
-              decoration: BoxDecoration(
-                color:  const Color.fromARGB(255, 255, 93, 147),
-                borderRadius: BorderRadius.circular(5),
-                
-             ),
             ),
       ),
     );

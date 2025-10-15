@@ -1,16 +1,76 @@
-# to_do_app_using_hive_local_storage
+# To Do App using Hive (Local Storage)
 
-A new Flutter project.
+A simple and fast **To-Do List Application built with Flutter** using **Hive** for offline local storage.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+* Add new tasks
+* Mark tasks as completed
+* Delete tasks
+* Offline local storage using Hive
+* Clean and simple UI
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+| Technology | Purpose                  |
+| ---------- | ------------------------ |
+| Flutter    | Frontend UI framework    |
+| Dart       | Programming language     |
+| Hive       | Local NoSQL key-value DB |
+
+---
+
+## ✅ Requirements
+
+Before running this project, make sure you have installed:
+
+* Flutter SDK
+* Android Studio / VS Code
+* Git
+* Emulator or physical device
+
+Check Flutter installation:
+
+```
+flutter --version
+```
+
+---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+
+```
+git clone https://github.com/your-username/to_do_app_using_hive_local_storage.git
+```
+
+2. Navigate to the project folder:
+
+```
+cd to_do_app_using_hive_local_storage
+```
+
+3. Install dependencies:
+
+```
+flutter pub get
+```
+
+4. Run the app:
+
+```
+flutter run
+```
+
+Or to run on Chrome:
+
+```
+flutter run -d chrome
+```
+
+
